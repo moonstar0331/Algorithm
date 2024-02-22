@@ -4,7 +4,7 @@
 
 ### 성능 요약
 
-메모리: 31120 KB, 시간: 48 ms
+메모리: 16004 KB, 시간: 200 ms
 
 ### 분류
 
@@ -12,13 +12,13 @@
 
 ### 제출 일자
 
-2024년 1월 17일 11:29:13
+2024년 2월 22일 17:27:29
 
 ### 문제 설명
 
 <p>직선 위에 위치를 나타내는 0, 1, 2, ...와 같은 음수가 아닌 정수들이 일정한 간격으로 오른쪽 방향으로 놓여 있다. 이러한 위치들 중 N개의 위치에 하나씩 점들이 주어진다(<그림 1>). 주어진 점들의 위치는 모두 다르다. 두 점 사이의 거리는 두 점의 위치를 나타내는 수들의 차이이다. <그림 1>에서는 4개의 점이 주어지고 점 <em>a</em>와 <em>b</em>의 거리는 3이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/e0b8e883-031b-4550-9afb-90dff9126cd7/-/preview/" style="width: 271px; height: 46px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 271px; height: 46px;"></p>
 
 <p style="text-align: center;"><그림 1></p>
 
@@ -32,13 +32,13 @@
 
 <p>아래 <그림 2>에서 이 점들을 표시한다. 여기서 흰색은 1, 검은색은 2에 해당된다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/42d4e7c4-f4c8-4234-ad4b-4bcc86f3502e/-/preview/" style="width: 276px; height: 67px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 276px; height: 67px;"></p>
 
 <p style="text-align: center;"><그림 2></p>
 
 <p>위의 조건으로 화살표를 그리면, 아래 <그림 3>과 같이 점 <em>a</em>의 화살표는 <em>c</em>로 연결된다. 점 <em>b</em>와 <em>d</em>의 화살표는 각각 <em>d</em>와 <em>b</em>로 연결된다. 또한 점 <em>c</em>와 <em>e</em>의 화살표는 각각 <em>e</em>와 <em>c</em>로 연결된다. 따라서 모든 화살표들의 길이 합은 3 + 3 + 2 + 3 + 2 = 13이다.</p>
 
-<p style="text-align: center;"><img alt="" src="https://upload.acmicpc.net/157c0a3e-059f-4b1b-a714-39a0081a72b9/-/preview/" style="width: 244px; height: 76px;"></p>
+<p style="text-align: center;"><img alt="" src="" style="width: 244px; height: 76px;"></p>
 
 <p style="text-align: center;"><그림 3></p>
 
