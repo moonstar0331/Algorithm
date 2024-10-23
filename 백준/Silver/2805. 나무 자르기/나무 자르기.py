@@ -1,7 +1,7 @@
 import sys
-input = sys.stdin.readline
-n, m = list(map(int, input().split()))
-a = list(map(int, input().split()))
+si = sys.stdin.readline
+n, m = list(map(int, si().split()))
+a = list(map(int, si().split()))
 
 def determination(H):
     sum = 0
@@ -18,5 +18,5 @@ while l <= r:
         l = mid + 1
     else:
         r = mid - 1
-
+        
 print(ans)
