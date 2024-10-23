@@ -1,9 +1,8 @@
 import sys
 from collections import deque
-
-input = sys.stdin.readline
-n, m = map(int, input().split())
-a = [input().strip() for _ in range(n)]
+si = sys.stdin.readline
+n, m = list(map(int, si().split()))
+a = [si().strip() for _ in range(n)]
 
 visit = [[False] * m for _ in range(n)]
 dist_hedgehog = [[-1] * m for _ in range(n)]
@@ -18,7 +17,7 @@ def bfs_water():
                 q.append((i, j))
                 visit[i][j] = True
                 dist_water[i][j] = 0
-
+                
     while q:
         x, y = q.popleft()
         for dx, dy in dir:
@@ -32,7 +31,7 @@ def bfs_water():
             q.append((nx, ny))
             visit[nx][ny] = True
             dist_water[nx][ny] = dist_water[x][y] + 1
-
+            
 def bfs_hedgehog():
     q = deque()
     for i in range(n):
@@ -42,7 +41,7 @@ def bfs_hedgehog():
                 q.append((i, j))
                 visit[i][j] = True
                 dist_hedgehog[i][j] = 0
-
+                
     while q:
         x, y = q.popleft()
         for dx, dy in dir:
@@ -58,7 +57,7 @@ def bfs_hedgehog():
             q.append((nx, ny))
             visit[nx][ny] = True
             dist_hedgehog[nx][ny] = dist_hedgehog[x][y] + 1
-
+            
 bfs_water()
 bfs_hedgehog()
 
