@@ -1,8 +1,8 @@
 import sys
 from collections import deque
-input = sys.stdin.readline
-n = int(input())
-a = [input().strip() for _ in range(n)]
+si = sys.stdin.readline
+n = int(si())
+a = [si().strip() for _ in range(n)]
 
 visit = [[False] * n for _ in range(n)]
 dir = [[1, 0], [0, 1], [-1, 0], [0, -1]]
@@ -20,10 +20,9 @@ def dfs(x, y):
         if a[nx][ny] == '0':
             continue
         dfs(nx, ny)
-
+        
 groups = []
 group_cnt = 0
-
 for i in range(n):
     for j in range(n):
         if a[i][j] == '0' or visit[i][j]:
@@ -31,7 +30,7 @@ for i in range(n):
         group_cnt = 0
         dfs(i, j)
         groups.append(group_cnt)
-
+        
 groups.sort()
 print(len(groups))
 for g in groups:
