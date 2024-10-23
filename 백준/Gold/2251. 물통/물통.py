@@ -1,7 +1,7 @@
 import sys
 from collections import deque
-input = sys.stdin.readline
-limit = list(map(int, input().split()))
+si = sys.stdin.readline
+limit = list(map(int, si().split()))
 
 visit = [[[False] * 205 for _ in range(205)] for _ in range(205)]
 possible = [0] * 205
@@ -16,24 +16,22 @@ def bfs():
             res[f] -= limit[t] - res[t]
             res[t] = limit[t]
         return res
-    
+
     queue = deque()
     queue.append([0, 0, limit[2]])
     visit[0][0][limit[2]] = True
 
     while queue:
         cur = queue.popleft()
-        if cur[0] == 0:
-            possible[cur[2]] = True
+        if cur[0] == 0: possible[cur[2]] = True
         for f in range(3):
             for t in range(3):
-                if f == t:
-                    continue
+                if f == t: continue
                 nxt = move(cur, f, t)
-                if visit[nxt[0]][nxt[1]][nxt[2]]:
-                    continue
+                if visit[nxt[0]][nxt[1]][nxt[2]]: continue
                 visit[nxt[0]][nxt[1]][nxt[2]] = True
                 queue.append(nxt)
+    
 
 bfs()
 for i in range(205):
