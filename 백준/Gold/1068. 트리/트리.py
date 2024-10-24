@@ -1,14 +1,12 @@
 import sys
 from collections import deque
-input = sys.stdin.readline
-
-n = int(input())
-parent = list(map(int, input().split()))
+si = sys.stdin.readline
+n = int(si())
+parent = list(map(int, si().split()))
 child = [[] for _ in range(n)]
 leaf = [0] * n
-erased = int(input())
+erased = int(si())
 root = 0
-
 for i in range(n):
     if parent[i] == -1:
         root = i
@@ -16,7 +14,7 @@ for i in range(n):
         if erased == i:
             continue
         child[parent[i]].append(i)
-
+        
 def dfs(x, par):
     if not child[x]:
         leaf[x] = 1
@@ -25,8 +23,7 @@ def dfs(x, par):
             continue
         dfs(y, x)
         leaf[x] += leaf[y]
-
+        
 if root != erased:
     dfs(root, -1)
-
 print(leaf[root])
